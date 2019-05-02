@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TAKENOBU IGARASHI</title>
+	<style>
+	body {
+		 background-color:darkblue;
+	 	 font-family: 'Montserrat', sans-serif;
+	     color: white;
+	     font-weight: 400;
+	     font-size: 15pt;
+	     margin: 80px 14px;
+
+	}
+
+	#homeLink {
+		display: block;
+	}
+
+	header {
+		width: 35%;
+		display: inline-block;
+	}
+	#title {
+		font-size: 2em;
+	}
+	p {
+	     font-weight: 900;
+	     font-size: 20pt;
+	}
+	.hidden {
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+
+	.hidden:hover {
+		opacity: 1;
+	}
+
+
+	</style>
+</head>
+<body>
+
+ 	<a href="SFMOMA1.html" id="homeLink">Home</a>
+	<header>
+		
+		<h1 id="title">CALENDARS 1988</h1>
+			
+		<p>
+		 	For eight years, from 1984 through 1991, Igarashi designed annual calendars, creating 622 unique number designs for each calendar — a remarkable achievement in graphic design. After the fade goes away, you can click on each number one by one for the next one to show up.
+		</p> 
+	</header>
+
+<img class="number" src="img/number1.png">
+<img class="number" src="img/number2.png">
+<img class="number" src="img/number3.png">
+<img class="number" src="img/number4.png">
+<img class="number" src="img/number5.png">
+<img class="number" src="img/number6.png">
+<img class="number" src="img/number7.png">
+<img class="number" src="img/number8.png">
+<img class="number" src="img/number9.png">
+<img class="number" src="img/number10.png">
+<img class="number" src="img/number11.png">
+<img class="number" src="img/number12.png">
+<img class="number" src="img/number13.png">
+<img class="number" src="img/number14.png">
+<img class="number" src="img/number15.png">
+<img class="number" src="img/number16.png">
+<img class="number" src="img/number17.png">
+<img class="number" src="img/number18.png">
+<img class="number" src="img/number19.png">
+<img class="number" src="img/number20.png">
+<img class="number" src="img/number21.png">
+<img class="number" src="img/number22.png">
+<img class="number" src="img/number23.png">
+<img class="number" src="img/number24.png">
+<img class="number" src="img/number25.png">
+<img class="number" src="img/number26.png">
+<img class="number" src="img/number27.png">
+<img class="number" src="img/number28.png">
+<img class="number" src="img/number29.png">
+<img class="number" src="img/number30.png">
+
+
+
+
+<script>
+
+
+let numbers = document.querySelectorAll('.number')
+
+setTimeout(function() {
+	for(let counter = 0; counter < numbers.length; counter++){
+		numbers[counter].addEventListener('click',function(){
+			if(numbers[counter]){
+				numbers[counter].classList.remove('hidden')
+			}
+		})
+		if (numbers[counter + 1]) {
+			numbers[counter + 1].classList.add('hidden')
+		}
+	}
+}, 1000);
+
+
+
+
+</script>
+
+</body>
+</html>
+
+

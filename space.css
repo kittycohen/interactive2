@@ -1,0 +1,155 @@
+/* reset padding and margins */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  padding: 3%;
+}
+
+.content-frame{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.sun {
+  height: 400px;
+  width: 400px;
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.mercury {
+    height: 40px;
+    width: 40px;
+}
+
+.mercury.showUp {  
+  background-color: #fdf86d;
+  background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
+  border-radius: 100%;
+
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+}
+
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+
+
+
+}
+
+
+
+
+.venus {
+  height: 60px;
+  width: 60px;
+}
+.venus.showUp {
+  background-color: #f5df2e;
+  background-image: linear-gradient(315deg, #f5df2e 0%, #f07654 74%);
+  border-radius: 100%;
+
+
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  
+}
+
+.earth{
+  height: 64px;
+  width: 64px;
+}
+
+.earth:hover {
+  background-color: #05e8ba;
+  background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+  display: inline-block;
+  border-radius: 100%;
+ 
+}
+
+.mars{
+  height: 50px;
+  width: 50px;
+
+}
+.mars:hover {
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+  border-radius: 100%;
+}
+
+.jupiter{
+  height: 90px;
+  width: 90px;
+}
+
+.jupiter:hover {
+  background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  border-radius: 100%;
+}
+
+.saturn {
+  height: 80px;
+  width: 80px;
+}
+
+.saturn:hover {
+  background-color: #edd812;
+  background-image: linear-gradient(315deg, #edd812 0%, #766a65 74%);
+  border-radius: 100%;
+}
+
+.uranus {
+  height: 55px;
+  width: 55px;
+}
+
+.uranus:hover {
+  background-color: #b1bfd8;
+  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  border-radius: 100%;
+}
+
+.neptune {
+  height: 48px;
+  width: 48px;
+}
+
+.neptune:hover {
+  background-color: #0abcf9;
+  background-image: linear-gradient(315deg, #0abcf9 0%, #2c69d1 74%);
+  border-radius: 100%;
+
+}
+
+
+

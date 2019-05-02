@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TAKENOBU IGARASHI</title>
+	<style>
+	body {
+		 background-color:darkblue;
+	 	 font-family: 'Montserrat', sans-serif;
+	     color: white;
+	     font-weight: 400;
+	     font-size: 15pt;
+	     margin: 80px 14px;
+
+	}
+
+	#homeLink {
+		display: block;
+	}
+
+	header {
+		width: 35%;
+		display: inline-block;
+	}
+	#title {
+		font-size: 2em;
+	}
+	p {
+	     font-weight: 900;
+	     font-size: 20pt;
+	}
+	.hidden {
+		opacity: 0;
+		transition: opacity 2s ease-in-out;
+	}
+	.letter {
+	    height: 332px;
+	}
+	#letterBox {
+		margin-top:60px;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+
+ 	<a href="SFMOMA1.html" id="homeLink">Home</a>
+	<header>
+		
+		<h1 id="title">SUMMER JAZZ FESTIVAL</h1>
+			
+		<p>
+		 	Series of lithographs with different designed type forms, hover over each letter for it to change into a different form to create a unique new type formation.
+		</p> 
+	</header>
+<div id="letterBox">
+<img class="letter" id="letterJ" src="img/j1.png">
+<img class="letter" id="letterA" src="img/a1.png">
+<img class="letter" id="letterZ1" src="img/z2.png">
+<img class="letter" id="letterZ2" src="img/z3.png">
+</div>
+<!-- <img class="letter" src="img/j2.png">
+<img class="letter" src="img/a2.png">
+<img class="letter" src="img/z2.png">
+<img class="letter" src="img/z4.png">
+ -->
+<script>
+
+
+let letters = document.querySelectorAll('.letter')
+
+
+let jIndex = 1
+let aIndex = 1
+let z1Index = 1
+let z2Index = 1
+
+
+
+	for(let counter = 0; counter < letters.length; counter++){
+		letters[counter].addEventListener('click',function(e){
+			if(e.target.id === 'letterJ'){
+				jIndex = jIndex + 1
+				if(jIndex > 3){
+					jIndex = 1
+				}
+				console.log('img/j' + jIndex +'.png')
+				e.target.src = 'img/j' + jIndex +'.png'
+			}
+
+			if(e.target.id === 'letterA'){
+				aIndex = aIndex + 1
+				if(aIndex > 3){
+					aIndex = 1
+				}
+				console.log('img/a' + aIndex +'.png')
+				e.target.src = 'img/a' + aIndex +'.png'
+			}
+
+			if(e.target.id === 'letterZ1'){
+				z1Index = z1Index + 1
+				if(z1Index > 3){
+					z1Index = 1
+				}
+				
+				e.target.src = 'img/z' + z1Index +'.png'
+			}
+
+
+			if(e.target.id === 'letterZ2'){
+				z2Index = z2Index + 1
+				if(z2Index > 3){
+					z2Index = 1
+				}
+				
+				e.target.src = 'img/z' + z2Index +'.png'
+			}
+
+
+
+		})
+		
+	}
+
+
+
+
+
+</script>
+
+</body>
+</html>

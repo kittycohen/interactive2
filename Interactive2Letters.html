@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>letterforms</title>
+       
+        <style>
+            main {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .character {
+                width: 100px;
+                height: 100px;
+                border: 2px solid;
+                position: relative;
+            }
+            .circle {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: pink;                
+            }
+            .innerCircle {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                /*position: absolute;*/
+                background-color: white;
+                margin: 15px;
+            }
+            .largeCircle {
+                height: 65px;
+                width: 65px;
+            }
+            .semiCircleTop {
+                height: 15px;
+                width: 30px;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                background-color: white;
+                position: absolute;
+                top: 12px;
+                left: 18px;
+            }
+            .semiCircleBottom {
+                height: 20px;
+                width: 45px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+                background-color: white;
+                position: absolute;
+                bottom: 8px;
+                left: 20px;
+
+            }
+            .roundEdge {
+                height: 40px;
+                width: 40px;
+                background-color: white;
+                position: absolute;
+                bottom: 11px;
+                right: 40px;
+                box-sizing: border-box;
+                border-color: pink transparent pink pink;
+                border-radius: 50%;
+                border-style: solid;
+                border-width: 10px 5px 10px 10px;
+            }
+            /*.roundEdge:before {
+                content: "";
+            }*/
+            .bottomMain {
+                left: 10px;
+                bottom: 10px;
+            }
+
+            .letterAMain {
+                top: 2px;
+                left: 2px;
+            }
+        
+         /*   .letterACenter {
+                top: 17px;
+                left: 17px;
+            }*/
+
+            .letterAStem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:40px;
+                border-radius: 35%;
+            }
+            
+            /*.letterBCenter {
+                bottom: 25px;
+                left: 25px;
+            }*/
+            .letterBStem {
+                height: 90px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:4px;
+                border-radius: 35%;
+            }
+
+            .letterCMain {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: pink;
+            }
+            .letterCCenter {
+                top: 15px;
+                left: 15px;
+            }
+
+
+            .letterDstem {
+                height: 90px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+            .letterEstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+             .letterElines {
+            
+            }
+            
+            .letterFstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            .letterFlines {
+            
+            }
+
+            .letterGMain{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: pink;
+            }
+
+            .letterGstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+            .letterHstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+            .letterIstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            
+            .letterJstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            
+            .letterKstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            
+            .letterKline1 {
+                height: 52px;
+                width: 10px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            
+            .letterKline2 {
+                height: 52px;
+                width: 10px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }    
+
+            .letterLstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }      
+            
+            .letterMstem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }      
+
+
+            .letterMVert {
+                height: 50px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left: 75px;
+                border-radius: 15%;
+            }
+            
+            .letterMVert2 {
+                height: 35px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left: 108px;
+                border-radius: 15%;
+                top:25px
+            }
+            
+            .letterMcenter {
+                height: 30px;
+                width: 15px;
+                position: absolute;
+                top: 30px;
+                left: 95px;
+                background-color: white;
+                border-radius: 15%;
+            }
+            
+            .letterMTop {
+                width: 53px;
+                height: 50px;
+                position: absolute;
+                left: 75px;
+                background-color: pink;
+                border-radius: 50%;
+            }
+
+            .letterNVert {
+                height: 50px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left: 75px;
+                border-radius: 15%;
+            }
+            
+            .letterNVert2 {
+                height: 35px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left: 108px;
+                border-radius: 15%;
+                top:25px
+            }
+            
+            .letterNcenter {
+                height: 30px;
+                width: 15px;
+                position: absolute;
+                top: 30px;
+                left: 95px;
+                background-color: white;
+                border-radius: 15%;
+            }
+            
+            .letterNTop {
+                width: 53px;
+                height: 50px;
+                position: absolute;
+                left: 75px;
+                background-color: pink;
+                border-radius: 50%;
+            }
+            
+            .letterOMain{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: pink;
+            }
+
+            .letterOCenter {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: white;
+                top: 25px;
+                left: 25px;
+            }
+
+            .letterPMain{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: pink;
+            }
+
+            .letterPCenter {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: white;
+                top: 25px;
+                left: 25px;
+            }
+            .letterPStem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+            .letterQMain{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: pink;
+            }
+
+            .letterQCenter {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: white;
+                top: 25px;
+                left: 25px;
+            }
+             .letterQLine {
+              
+            }
+
+            .letterRStem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+            .letterRTop {
+                width: 53px;
+                height: 50px;
+                position: absolute;
+                left: 75px;
+                background-color: pink;
+                border-radius: 50%;
+            }
+
+            /* Letter S: */
+            .letterSMain {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: pink;
+                position: relative;
+            }
+            .letterSTop {
+                top: 5px;
+            }
+            .letterSBottom {
+                bottom: 5px;
+            }
+            .letterSWhite {
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                position: relative;
+            }
+            .letterSTopWhite {
+                border-radius: 50% 30% 0 30%;
+                top: 15px;
+                left: 30px
+            }
+            .letterSBottomWhite {
+                border-radius: 50%;
+                top: 10px;
+                right: 0;
+            }
+
+            
+            /* Letter T: */
+            .letterTStem {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            
+            .letterTLine {
+              
+            }
+
+            .letterInvert {
+                position: absolute;
+                transform: rotate(180deg);
+                left: 130px;
+                top: 60px;
+            }
+
+            .letterXLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+            .letterXLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+             .letterXLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+            .letterYLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+              .letterYLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+              .letterYLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+              .letterZLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+              .letterZLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+              .letterZLine {
+                height: 52px;
+                width: 20px;
+                position: absolute;
+                background-color: pink;
+                left:45px;
+                border-radius: 35%;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+       <main> 
+        <div class="character letterA">
+            <div class="circle letterAMain">
+                <div class="innerCircle"></div>
+            </div>
+            
+            <div class="letterAStem"></div>
+        </div>
+
+        <div class="character letterB">
+            <div class="letterBStem"></div>
+            <div class="bottomMain circle">
+                <div class="innerCircle"></div>                
+            </div>
+        </div>
+
+        <div class="character letterC">
+            <div class="circle letterCMain"></div>
+            <div class="innerCircle letterCCenter"></div>
+            <div class="roundEdge letterCRight"></div>
+        </div>
+
+        <div class="character letterD">
+            <div class="bottomMain circle">
+                <div class="innerCircle"></div>
+            </div>
+            <div class="letterDstem"></div>
+        </div>
+
+        <div class="character letterE">
+            <div class="circle largeCircle">
+                <div class="semiCircleTop"></div>
+                <div class="semiCircleBottom"></div>
+            </div>
+        </div>
+
+        <div class="character letterF">
+        <div class="letterFMain"></div>
+           <div class="letterFstem"></div>
+           <div class="letterFlines"></div>
+        </div>
+
+        <div class="character letterG">
+        <div class="letterGMain"></div>
+           <div class="letterGCenter"></div>
+           <div class="letterGStem"></div>
+        </div>
+
+        <div class="character letterH">
+        <div class="letterHMain"></div>
+           <div class="letterHCenter"></div>
+           <div class="letterHStem"></div>
+        </div>
+
+        <div class="character letterI">
+        <div class="letterIMain"></div>
+           <div class="letterICenter"></div>
+           <div class="letterIStem"></div>
+        </div>
+
+        <div class="character letterJ">
+        <div class="letterJMain"></div>
+           <div class="letterJCenter"></div>
+           <div class="letterJStem"></div>
+        </div>
+
+        <div class="character letterK">
+        <div class="letterKMain"></div>
+           <div class="letterKCenter"></div>
+           <div class="letterKStem"></div>
+        </div>
+
+         <div class="character letterL">
+        <div class="letterLMain"></div>
+           <div class="letterLCenter"></div>
+           <div class="letterLStem"></div>
+        </div>
+
+         <div class="character letterM">
+        <div class="letterMMain"></div>
+           <div class="letterMCenter"></div>
+           <div class="letterMStem"></div>
+        </div>
+        
+        <div class="character letterN">
+            <div class="letterNVert"></div>
+            <div class="letterNVert2"></div>
+            <div class="letterNTop"></div>
+            <div class="letterNcenter"></div>
+        </div>
+
+         <div class="character letterO">
+        <div class="letterOMain"></div>
+           <div class="letterOCenter"></div>
+           <div class="letterOStem"></div>
+        </div>
+
+         <div class="character letterP">
+        <div class="letterPMain"></div>
+           <div class="letterPCenter"></div>
+           <div class="letterPStem"></div>
+        </div> 
+
+        <div class="character letterQ">
+        <div class="letterQMain"></div>
+           <div class="letterQCenter"></div>
+           <div class="letterQStem"></div>
+        </div>
+         <div class="character letterR">
+        <div class="letterRMain"></div>
+           <div class="letterRCenter"></div>
+           <div class="letterRStem"></div>
+        </div>
+        <div class="character letterS">
+            <div class="letterSMain letterSTop">
+                <div class="letterSWhite letterSTopWhite"></div>
+            </div>
+            <div class="letterSMain letterSBottom">
+                <div class="letterSWhite letterSBottomWhite"></div>
+            </div>
+        </div>
+         <div class="character letterT">
+        <div class="letterTMain"></div>
+           <div class="letterTCenter"></div>
+           <div class="letterTStem"></div>
+        </div>
+        
+        <div class="character letterU">
+            <div class="letterInvert">
+                <div class="letterUVert"></div>
+                <div class="letterUVert2"></div>
+                <div class="letterUTop"></div>
+                <div class="letterUcenter"></div>
+            </div>
+        </div>
+
+        <div class="character letterV">
+            <div class="letterInvert">
+                <div class="letterVVert"></div>
+                <div class="letterVVert2"></div>
+                <div class="letterVTop"></div>
+                <div class="letterVcenter"></div>
+            </div>
+        </div>
+
+        <div class="character letterW">
+            <div class="letterInvert">
+                <div class="letterWVert"></div>
+                <div class="letterWVert2"></div>
+                <div class="letterWTop"></div>
+                <div class="letterWcenter"></div>
+            </div>
+        </div>
+
+        <div class="character letterX">
+            <div class="letterXVert"></div>
+            <div class="letterXVert2"></div>
+            <div class="letterXTop"></div>
+            <div class="letterXcenter"></div>
+        </div>
+
+        <div class="character letterY">
+            <div class="letterYVert"></div>
+            <div class="letterYVert2"></div>
+            <div class="letterYTop"></div>
+            <div class="letterYcenter"></div>
+        </div>
+
+        <div class="character letterZ">
+            <div class="letterZVert"></div>
+            <div class="letterZVert2"></div>
+            <div class="letterZTop"></div>
+            <div class="letterZcenter"></div>
+        </div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        <div class="character"></div>
+        </main>
+    </body>
+</html>

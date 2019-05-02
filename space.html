@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+		<meta charset="utf-8">
+		<title>Website</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="space.css" >
+  </head>
+
+  <body class="cc-home">
+
+    <div class="page-frame">
+
+      <div class="content-frame">
+
+        <main>
+          <div class="sun">
+          </div>
+
+          <div class="mercury" id="mercury">     
+          </div>
+
+          <div class="venus" id="venus">     
+          </div>
+
+          <div class="earth" id="earth">     
+          </div>
+          
+          <div class="mars" id="mars">     
+          </div>
+
+          <div class="jupiter" id="jupiter">     
+          </div>
+
+          <div class="saturn" id="saturn">    
+          </div>
+
+          <div class="uranus" id="uranus">     
+          </div>
+
+          <div class="neptune" id="neptune">
+          </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+
+      let mercury = document.querySelector('.mercury')
+
+      mercury.onmouseenter = function(){
+
+          mercury.classList.add('showUp')
+
+
+          setTimeout(function(){
+
+            mercury.classList.remove('showUp')
+          },3000)
+
+      }
+
+      let venus = document.querySelector('.venus')
+
+      venus.onmouseenter = function(){
+
+          venus.classList.add('showUp')
+
+
+          setTimeout(function(){
+
+            venus.classList.remove('showUp')
+          },3000)
+
+      }
+
+
+    </script>
+
+
+
+  </body>
+</html>

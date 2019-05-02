@@ -1,0 +1,99 @@
+body {
+  transition:background 200ms ease;  
+  font-size:2vw;
+  font-family:Menlo, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.circle {
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  background-color: red;
+}
+
+@media only screen and  (min-width: 400px) {
+  body {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);;
+  }
+  
+
+  .circle {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  }
+  
+
+  .circle {
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  }
+  
+}
+
+@media only screen and  (min-width: 800px) {
+  body {
+   background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  }
+  
+
+  .circle {
+   background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  }
+}
+
+@media only screen and  (min-width: 1000px) {
+  body {
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  }
+  
+
+  .circle {
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  }
+}
+
+
+@media only screen and  (min-width: 1200px) {
+  body {
+  background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);  }
+  
+
+  .circle {
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);  }
+}
+
+@media only screen and  (min-width: 1400px) {
+  body {
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);  }
+  
+
+  .circle {
+  background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);  }
+}
+
+
+@media only screen and  (min-width: 1600px) {
+  body {
+  background-image: linear-gradient(to top, #e8198b 0%, #c7eafd 100%); }
+
+  .circle {
+  background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);  }
+}
+
+
+@media only screen and  (min-width: 1800px) {
+  body {
+  background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);  }
+  
+
+  .circle {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);  }
+}
